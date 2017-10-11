@@ -1,0 +1,4789 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "en-US",
+    "dataSources": [
+      {
+        "name": "SqlServer ATLAS AdventureworksDW2016CTP3",
+        "connectionString": "Provider=SQLNCLI11;Data Source=ATLAS;Initial Catalog=AdventureworksDW2016CTP3;Integrated Security=SSPI;Persist Security Info=false",
+        "impersonationMode": "impersonateServiceAccount",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "Internet Sales",
+        "isHidden": true,
+        "columns": [
+          {
+            "name": "ProductKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "ProductKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "OrderDateKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "OrderDateKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ShipDateKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "ShipDateKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CustomerKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "CustomerKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CurrencyKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "CurrencyKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "DueDateKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "DueDateKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "PromotionKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "PromotionKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "SalesTerritoryKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "SalesTerritoryKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Sales Amount",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "Sales Amount",
+            "sourceProviderType": "Decimal"
+          },
+          {
+            "name": "Freight",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "Freight",
+            "sourceProviderType": "Decimal"
+          },
+          {
+            "name": "Order Quantity",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "Order Quantity",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "Discount Amount",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "Discount Amount",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "Total Product Cost",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "Total Product Cost",
+            "sourceProviderType": "Decimal"
+          },
+          {
+            "name": "Sales order number",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "Sales order number",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Tax Amount",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "Tax Amount",
+            "sourceProviderType": "Decimal"
+          },
+          {
+            "name": "Extended Amount",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "Extended Amount"
+          },
+          {
+            "name": "Order Date",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "Order Date"
+          },
+          {
+            "name": "Due Date",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "Due Date"
+          },
+          {
+            "name": "Ship Date",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "Ship Date"
+          },
+          {
+            "name": "Unit Price",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "Unit Price"
+          },
+          {
+            "name": "Product Standard Cost",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "Product Standard Cost"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Internet Sales",
+            "source": {
+              "query": [
+                "SELECT ",
+                "      Top 0 * ",
+                "FROM ",
+                "[BI].[vFact_InternetSales]"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "      Top 0 * ",
+                  "FROM ",
+                  "[BI].[vFact_InternetSales]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Internet Sales-2010",
+            "mode": "import",
+            "source": {
+              "query": [
+                "SELECT ",
+                "       * ",
+                "FROM ",
+                "[BI].[vFact_InternetSales]",
+                "WHERE",
+                "OrderDateKey Between 20100101 and 20101231"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "       * ",
+                  "FROM ",
+                  "[BI].[vFact_InternetSales]",
+                  "WHERE",
+                  "OrderDateKey Between 20100101 and 20101231</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Internet Sales-2011",
+            "mode": "import",
+            "source": {
+              "query": [
+                "SELECT ",
+                "      *  ",
+                "FROM ",
+                "[BI].[vFact_InternetSales]",
+                "WHERE",
+                "OrderDateKey Between 20110101 and 20111231"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "      *  ",
+                  "FROM ",
+                  "[BI].[vFact_InternetSales]",
+                  "WHERE",
+                  "OrderDateKey Between 20110101 and 20111231</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Internet Sales-2012",
+            "mode": "import",
+            "source": {
+              "query": [
+                "SELECT ",
+                "      * ",
+                "FROM ",
+                "[BI].[vFact_InternetSales] ",
+                "WHERE ",
+                "OrderDateKey Between 20120101 and 20121231"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "      * ",
+                  "FROM ",
+                  "[BI].[vFact_InternetSales] ",
+                  "WHERE ",
+                  "OrderDateKey Between 20120101 and 20121231</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Internet Sales-2013",
+            "mode": "import",
+            "source": {
+              "query": [
+                "SELECT ",
+                "       * ",
+                "FROM ",
+                "[BI].[vFact_InternetSales]",
+                "WHERE ",
+                "OrderDateKey Between 20130101 and 20131231"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "       * ",
+                  "FROM ",
+                  "[BI].[vFact_InternetSales]",
+                  "WHERE ",
+                  "OrderDateKey Between 20130101 and 20131231</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Internet Sales-2014",
+            "mode": "import",
+            "source": {
+              "query": [
+                "SELECT ",
+                "       * ",
+                "FROM ",
+                "[BI].[vFact_InternetSales] ",
+                "WHERE ",
+                "OrderDateKey Between 20140101 and 20141231"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "       * ",
+                  "FROM ",
+                  "[BI].[vFact_InternetSales] ",
+                  "WHERE ",
+                  "OrderDateKey Between 20140101 and 20141231</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Internet Sales-2015",
+            "mode": "import",
+            "source": {
+              "query": [
+                "SELECT ",
+                "       * ",
+                "FROM ",
+                "[BI].[vFact_InternetSales]",
+                "WHERE",
+                "OrderDateKey Between 20150101 and 20151231"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "       * ",
+                  "FROM ",
+                  "[BI].[vFact_InternetSales]",
+                  "WHERE",
+                  "OrderDateKey Between 20150101 and 20151231</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Internet Sales-2016",
+            "mode": "import",
+            "source": {
+              "query": [
+                "SELECT ",
+                "       * ",
+                "FROM ",
+                "[BI].[vFact_InternetSales] ",
+                "",
+                "WHERE",
+                "OrderDateKey Between 20160101 and 20161231"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "       * ",
+                  "FROM ",
+                  "[BI].[vFact_InternetSales] ",
+                  "",
+                  "WHERE",
+                  "OrderDateKey Between 20160101 and 20161231</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Internet Sales-2017",
+            "mode": "import",
+            "source": {
+              "query": [
+                "SELECT ",
+                "       *  ",
+                "FROM ",
+                "[BI].[vFact_InternetSales]",
+                "WHERE",
+                "OrderDateKey Between 20170101 and 20171231"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "       *  ",
+                  "FROM ",
+                  "[BI].[vFact_InternetSales]",
+                  "WHERE",
+                  "OrderDateKey Between 20170101 and 20171231</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Internet Sales-2018",
+            "mode": "import",
+            "source": {
+              "query": [
+                "SELECT ",
+                "*",
+                "FROM ",
+                "[BI].[vFact_InternetSales]",
+                "WHERE",
+                "OrderDateKey Between 20180101 and 20181231"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "*",
+                  "FROM ",
+                  "[BI].[vFact_InternetSales]",
+                  "WHERE",
+                  "OrderDateKey Between 20180101 and 20181231</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "measures": [
+          {
+            "name": "Internet Sales Amount",
+            "expression": "sum('Internet Sales'[Sales Amount])",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "displayFolder": "Internet Sales",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Internet Sales Freight",
+            "expression": "sum('Internet Sales'[Freight])",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "displayFolder": "Internet Sales",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Internet Sales Order Quantity",
+            "expression": "sum('Internet Sales'[Order Quantity])",
+            "formatString": "#,0",
+            "displayFolder": "Internet Sales"
+          },
+          {
+            "name": "Internet Sales Distinct Products",
+            "expression": "DISTINCTCOUNT('Internet Sales'[ProductKey])",
+            "formatString": "#,0",
+            "displayFolder": "Internet Sales"
+          },
+          {
+            "name": "Internet Sales CY (YTD)",
+            "expression": [
+              "",
+              "CALCULATE",
+              "(",
+              "[Internet Sales Amount],",
+              "FILTER",
+              "(",
+              "ALL('Date'),",
+              "'Date'[Fiscal Year] = MAX('Date'[Fiscal Year]) && 'Date'[Date] <= MAX('Date'[Date])",
+              ")",
+              ")"
+            ],
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "displayFolder": "Internet Sales Date Intelligence",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Internet Sales LY (YTD)",
+            "expression": [
+              "",
+              "CALCULATE",
+              "(",
+              "[Internet Sales Amount],",
+              "FILTER",
+              "(",
+              "ALL('Date'),",
+              "'Date'[Fiscal Year] = MAX('Date'[Fiscal Year])-1 && 'Date'[Date] <= MAX('Date'[Fiscal Date Last Year])",
+              ")",
+              ")"
+            ],
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "displayFolder": "Internet Sales Date Intelligence",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Internet Sales CY (PTD)",
+            "expression": [
+              "",
+              "CALCULATE",
+              "(",
+              "[Internet Sales Amount],",
+              "FILTER",
+              "(",
+              "ALL('Date'),",
+              "'Date'[Fiscal Yr-Period Sort] = MAX('Date'[Fiscal Yr-Period Sort]) && 'Date'[Date] <= MAX('Date'[Date])",
+              ")",
+              ")"
+            ],
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "displayFolder": "Internet Sales Date Intelligence",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Internet Sales CY (QTD)",
+            "expression": [
+              "",
+              "CALCULATE",
+              "(",
+              "[Internet Sales Amount],",
+              "FILTER",
+              "(",
+              "ALL('Date'),",
+              "'Date'[Fiscal Yr-Qtr Sort] = MAX('Date'[Fiscal Yr-Qtr Sort]) && 'Date'[Date] <= MAX('Date'[Date])",
+              ")",
+              ")"
+            ],
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "displayFolder": "Internet Sales Date Intelligence",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Last Internet Sales Date",
+            "expression": [
+              "",
+              "CALCULATE",
+              "(",
+              "LASTDATE('Date'[Date]),",
+              "'Internet Sales'",
+              ")"
+            ],
+            "formatString": "Short Date",
+            "displayFolder": "Internet Sales Date Intelligence",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeShortDatePattern\" />"
+              }
+            ]
+          },
+          {
+            "name": "First Internet Sales Date",
+            "expression": [
+              "",
+              "CALCULATE",
+              "(",
+              "FIRSTDATE('Date'[Date]),",
+              "'Internet Sales'",
+              ")"
+            ],
+            "formatString": "Short Date",
+            "displayFolder": "Internet Sales Date Intelligence",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeShortDatePattern\" />"
+              }
+            ]
+          },
+          {
+            "name": "Days Since Last Sale",
+            "expression": "DATEDIFF([Last Internet Sales Date],TODAY(),DAY)",
+            "formatString": "#,0",
+            "displayFolder": "Internet Sales Date Intelligence"
+          },
+          {
+            "name": "Weeks Since Last Sale",
+            "expression": "DATEDIFF([Last Internet Sales Date],TODAY(),WEEK)",
+            "formatString": "#,0",
+            "displayFolder": "Internet Sales Date Intelligence"
+          },
+          {
+            "name": "Days Between First and Last Internet Sales",
+            "expression": [
+              "",
+              "DATEDIFF([First Internet Sales Date],[Last Internet Sales Date],DAY)"
+            ],
+            "formatString": "#,0",
+            "displayFolder": "Internet Sales Date Intelligence"
+          },
+          {
+            "name": "Internet Sales Product Rank",
+            "expression": [
+              "",
+              "if(HASONEVALUE('Product'[Product Name]) = TRUE() && ISBLANK([Internet Sales Amount]) = FALSE(),",
+              "RANKX(all('Product'[Product Name]),[Internet Sales Amount]),BLANK()",
+              ")"
+            ],
+            "formatString": "0",
+            "displayFolder": "Internet Sales Rank Intelligence"
+          },
+          {
+            "name": "Internet Sales Product Subcategory Rank",
+            "expression": [
+              "",
+              "if(HASONEVALUE('Product'[Product Subcategory]) = TRUE() && ISBLANK([Internet Sales Amount]) = FALSE(),",
+              "RANKX(all('Product'[Product Subcategory],'Product'[Product Category]),[Internet Sales Amount]),BLANK()",
+              ")"
+            ],
+            "formatString": "0",
+            "displayFolder": "Internet Sales Rank Intelligence"
+          },
+          {
+            "name": "Internet Sales Margin",
+            "expression": [
+              "",
+              "[Internet Sales Amount] - [Internet Sales Product Cost]"
+            ],
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "displayFolder": "Internet Sales",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Internet Sales Product Cost",
+            "expression": "sum('Internet Sales'[Total Product Cost])",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "displayFolder": "Internet Sales",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Internet Sales Margin %",
+            "expression": [
+              "",
+              "DIVIDE",
+              "(",
+              "[Internet Sales Margin]",
+              ",",
+              "[Internet Sales Amount]",
+              ")"
+            ],
+            "formatString": "0.0 %;-0.0 %;0.0 %",
+            "displayFolder": "Internet Sales"
+          },
+          {
+            "name": "Internet Sales LY",
+            "expression": [
+              "",
+              "CALCULATE",
+              "(",
+              "[Internet Sales Amount],",
+              "FILTER(ALL('Date'),CONTAINS(VALUES('Date'[Fiscal Date Last Year]),'Date'[Fiscal Date Last Year],'Date'[Date]))",
+              ")"
+            ],
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "displayFolder": "Internet Sales Date Intelligence",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Internet Sales Margin LY",
+            "expression": [
+              "",
+              "CALCULATE",
+              "(",
+              "[Internet Sales Margin],",
+              "FILTER(ALL('Date'),CONTAINS(VALUES('Date'[Fiscal Date Last Year]),'Date'[Fiscal Date Last Year],'Date'[Date]))",
+              ")"
+            ],
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "displayFolder": "Internet Sales Date Intellignece",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Internet Sales Mountain Bike Margin % KPI",
+            "expression": [
+              "",
+              "CALCULATE",
+              "(",
+              "[Internet Sales Margin %],",
+              "'Product'[Product Subcategory] = \"Mountain Bikes\"",
+              ")"
+            ],
+            "formatString": "0.0 %;-0.0 %;0.0 %",
+            "displayFolder": "Internet Sales KPIs",
+            "kpi": {
+              "targetExpression": "'''Internet Sales'''[Internet Sales Margin % Mountain Bikes LY]",
+              "targetFormatString": "0.0 %;-0.0 %;0.0 %",
+              "statusGraphic": "Traffic Light - Single",
+              "statusExpression": [
+                "var x='Internet Sales'[Internet Sales Mountain Bike Margin % KPI]/'Internet Sales'[_Internet Sales Mountain Bike Margin % KPI Goal] return",
+                "            if(ISBLANK(x),BLANK(),",
+                "                    If(x<0.98,-1,",
+                "\t                If(x<1.02,0,1)",
+                "                )",
+                "            )",
+                "            "
+              ],
+              "annotations": [
+                {
+                  "name": "GoalType",
+                  "value": "Measure"
+                },
+                {
+                  "name": "KpiStatusType",
+                  "value": "Linear"
+                },
+                {
+                  "name": "KpiThresholdType",
+                  "value": "Percentage"
+                },
+                {
+                  "name": "KpiThresholdOrdering",
+                  "value": "Ascending"
+                },
+                {
+                  "name": "KpiThresholdCount",
+                  "value": "2"
+                },
+                {
+                  "name": "KpiThreshold_0",
+                  "value": "98"
+                },
+                {
+                  "name": "KpiThreshold_1",
+                  "value": "102"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Internet Sales Margin % Mountain Bikes LY",
+            "expression": [
+              "",
+              "CALCULATE",
+              "(",
+              "[Internet Sales Margin %],",
+              "FILTER(ALL('Date'),CONTAINS(VALUES('Date'[Fiscal Date Last Year]),'Date'[Fiscal Date Last Year],'Date'[Date])),",
+              "'Product'[Product Subcategory] = \"Mountain Bikes\"",
+              ")"
+            ],
+            "formatString": "0.0 %;-0.0 %;0.0 %",
+            "isHidden": true
+          },
+          {
+            "name": "Internet Sales Road and Touring Bike Margin % KPI",
+            "expression": [
+              "",
+              "CALCULATE",
+              "(",
+              "[Internet Sales Margin %],",
+              "'Product'[Product Subcategory] = \"Road Bikes\" || 'Product'[Product Subcategory] = \"Touring Bikes\"",
+              ")",
+              ""
+            ],
+            "formatString": "0.0 %;-0.0 %;0.0 %",
+            "displayFolder": "Internet Sales KPIs",
+            "kpi": {
+              "targetExpression": "'''Internet Sales'''[Internet Sales Margin % Road and Touring Bikes LY]",
+              "targetFormatString": "0.0 %;-0.0 %;0.0 %",
+              "statusGraphic": "Traffic Light - Single",
+              "statusExpression": [
+                "var x='Internet Sales'[Internet Sales Road and Touring Bike Margin % KPI]/'Internet Sales'[_Internet Sales Road and Touring Bike Margin % KPI Goal] return",
+                "            if(ISBLANK(x),BLANK(),",
+                "                    If(x<0.98,-1,",
+                "\t                If(x<1.02,0,1)",
+                "                )",
+                "            )",
+                "            "
+              ],
+              "annotations": [
+                {
+                  "name": "GoalType",
+                  "value": "Measure"
+                },
+                {
+                  "name": "KpiStatusType",
+                  "value": "Linear"
+                },
+                {
+                  "name": "KpiThresholdType",
+                  "value": "Percentage"
+                },
+                {
+                  "name": "KpiThresholdOrdering",
+                  "value": "Ascending"
+                },
+                {
+                  "name": "KpiThresholdCount",
+                  "value": "2"
+                },
+                {
+                  "name": "KpiThreshold_0",
+                  "value": "98"
+                },
+                {
+                  "name": "KpiThreshold_1",
+                  "value": "102"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Internet Sales Margin % Road and Touring Bikes LY",
+            "expression": [
+              "",
+              "CALCULATE",
+              "(",
+              "[Internet Sales Margin %],",
+              "FILTER(ALL('Date'),CONTAINS(VALUES('Date'[Fiscal Date Last Year]),'Date'[Fiscal Date Last Year],'Date'[Date])),",
+              "'Product'[Product Subcategory] = \"Road Bikes\" || 'Product'[Product Subcategory] = \"Touring Bikes\"",
+              ")",
+              ""
+            ],
+            "formatString": "0.0 %;-0.0 %;0.0 %",
+            "isHidden": true
+          },
+          {
+            "name": "Variable Internet Sales Freight",
+            "expression": [
+              "",
+              "",
+              "VAR GrowthRate = .10",
+              "",
+              "Return",
+              "",
+              "[Internet Sales Freight] * (1+GrowthRate)"
+            ],
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "displayFolder": "Internet Sales",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "SELECT ",
+              "       * ",
+              "FROM ",
+              "[BI].[vFact_InternetSales]"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Internet Sales"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+              "       * ",
+              "FROM ",
+              "[BI].[vFact_InternetSales]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Date",
+        "dataCategory": "Time",
+        "columns": [
+          {
+            "name": "Calendar Month",
+            "dataType": "string",
+            "sourceColumn": "Calendar Month",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Calendar Year",
+            "dataType": "int64",
+            "sourceColumn": "Calendar Year",
+            "formatString": "0",
+            "sourceProviderType": "Double",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Calendar Yr-Mo",
+            "dataType": "string",
+            "sourceColumn": "Calendar Yr-Mo",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Calendar Yr-Qtr",
+            "dataType": "string",
+            "sourceColumn": "Calendar Yr-Qtr",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Calendar Yr-Wk",
+            "dataType": "string",
+            "sourceColumn": "Calendar Yr-Wk",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "isKey": true,
+            "sourceColumn": "Date",
+            "formatString": "Short Date",
+            "sourceProviderType": "Date",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeShortDatePattern\" />"
+              }
+            ]
+          },
+          {
+            "name": "Fiscal Quarter",
+            "dataType": "string",
+            "sourceColumn": "Fiscal Quarter",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Fiscal Period",
+            "dataType": "int64",
+            "sourceColumn": "Fiscal Period",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "Weekday Sort",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "Weekday Sort",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "Weekday Abb",
+            "dataType": "string",
+            "sourceColumn": "Weekday Abb",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Weekday",
+            "dataType": "string",
+            "sourceColumn": "Weekday",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Fiscal Yr-Wk Sort",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "Fiscal Yr-Wk Sort",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "Fiscal Yr-Wk",
+            "dataType": "string",
+            "sourceColumn": "Fiscal Yr-Wk",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Fiscal Yr-Qtr",
+            "dataType": "string",
+            "sourceColumn": "Fiscal Yr-Qtr",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Fiscal Yr-Period",
+            "dataType": "string",
+            "sourceColumn": "Fiscal Yr-Period",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Fiscal Yr-Period Sort",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "Fiscal Yr-Period Sort",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "Fiscal Year",
+            "dataType": "int64",
+            "sourceColumn": "Fiscal Year",
+            "formatString": "0",
+            "sourceProviderType": "Double",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Fiscal Week Sort",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "Fiscal Week Sort",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "Fiscal Yr-Qtr Sort",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "Fiscal Yr-Qtr Sort",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "Fiscal Date Last Year",
+            "dataType": "dateTime",
+            "sourceColumn": "Fiscal Date Last Year",
+            "formatString": "Short Date",
+            "sourceProviderType": "Date",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeShortDatePattern\" />"
+              }
+            ]
+          },
+          {
+            "name": "Fiscal Week Sequence",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "Fiscal Week Sequence",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "Fiscal Week of Period",
+            "dataType": "int64",
+            "sourceColumn": "Fiscal Week of Period",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "Calendar Month Number",
+            "dataType": "int64",
+            "sourceColumn": "Calendar Month Number"
+          },
+          {
+            "name": "Calendar Week in Year",
+            "dataType": "string",
+            "sourceColumn": "Calendar Week in Year"
+          },
+          {
+            "name": "Calendar Week Number in Year",
+            "dataType": "int64",
+            "sourceColumn": "Calendar Week Number in Year"
+          },
+          {
+            "name": "Calendar Year Month Number",
+            "dataType": "int64",
+            "sourceColumn": "Calendar Year Month Number"
+          },
+          {
+            "name": "Calendar Year Week Number",
+            "dataType": "int64",
+            "sourceColumn": "Calendar Year Week Number"
+          },
+          {
+            "name": "Calendar Year Status",
+            "dataType": "string",
+            "sourceColumn": "Calendar Year Status"
+          },
+          {
+            "name": "Calendar Month Status",
+            "dataType": "string",
+            "sourceColumn": "Calendar Month Status"
+          },
+          {
+            "name": "Calendar Week Status",
+            "dataType": "string",
+            "sourceColumn": "Calendar Week Status"
+          },
+          {
+            "name": "Calendar Year Quarter Number",
+            "dataType": "int64",
+            "sourceColumn": "Calendar Year Quarter Number"
+          },
+          {
+            "name": "Prior Calendar Year Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Prior Calendar Year Date"
+          },
+          {
+            "name": "Prior Calendar Month Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Prior Calendar Month Date"
+          },
+          {
+            "name": "Date Key",
+            "dataType": "int64",
+            "sourceColumn": "Date Key"
+          },
+          {
+            "name": "Date Number",
+            "dataType": "int64",
+            "sourceColumn": "Date Number"
+          },
+          {
+            "name": "Day of Year",
+            "dataType": "int64",
+            "sourceColumn": "Day of Year"
+          },
+          {
+            "name": "Calendar Week Ending Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Calendar Week Ending Date"
+          },
+          {
+            "name": "Full Date Description",
+            "dataType": "string",
+            "sourceColumn": "Full Date Description"
+          },
+          {
+            "name": "Day Number in Calendar Month",
+            "dataType": "int64",
+            "sourceColumn": "Day Number in Calendar Month"
+          },
+          {
+            "name": "Day Number in Calendar Year",
+            "dataType": "int64",
+            "sourceColumn": "Day Number in Calendar Year"
+          },
+          {
+            "name": "Calendar Quarter in Year",
+            "dataType": "string",
+            "sourceColumn": "Calendar Quarter in Year"
+          },
+          {
+            "name": "Calendar Quarter Number in Year",
+            "dataType": "int64",
+            "sourceColumn": "Calendar Quarter Number in Year"
+          },
+          {
+            "name": "Weekday Indicator",
+            "dataType": "string",
+            "sourceColumn": "Weekday Indicator"
+          },
+          {
+            "name": "Holiday Indicator",
+            "dataType": "string",
+            "sourceColumn": "Holiday Indicator"
+          },
+          {
+            "name": "Calendar Week in Month",
+            "dataType": "int64",
+            "sourceColumn": "Calendar Week in Month"
+          },
+          {
+            "name": "One Year Prior Date",
+            "dataType": "dateTime",
+            "sourceColumn": "One Year Prior Date"
+          },
+          {
+            "name": "DST Flag",
+            "dataType": "string",
+            "sourceColumn": "DST Flag"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Date",
+            "dataView": "full",
+            "source": {
+              "query": [
+                "SELECT ",
+                "* FROM ",
+                "[BI].[vDim_FinDate]"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "* FROM ",
+                  "[BI].[vDim_FinDate]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Calendar Hierarchy",
+            "levels": [
+              {
+                "name": "Calendar Year",
+                "ordinal": 0,
+                "column": "Calendar Year"
+              },
+              {
+                "name": "Calendar Yr-Qtr",
+                "ordinal": 1,
+                "column": "Calendar Yr-Qtr"
+              },
+              {
+                "name": "Calendar Yr-Mo",
+                "ordinal": 2,
+                "column": "Calendar Yr-Mo"
+              },
+              {
+                "name": "Calendar Yr-Wk",
+                "ordinal": 3,
+                "column": "Calendar Yr-Wk"
+              },
+              {
+                "name": "Date",
+                "ordinal": 4,
+                "column": "Date"
+              }
+            ]
+          },
+          {
+            "name": "Fiscal Hierarchy",
+            "levels": [
+              {
+                "name": "Fiscal Year",
+                "ordinal": 0,
+                "column": "Fiscal Year"
+              },
+              {
+                "name": "Fiscal Yr-Qtr",
+                "ordinal": 1,
+                "column": "Fiscal Yr-Qtr"
+              },
+              {
+                "name": "Fiscal Yr-Period",
+                "ordinal": 2,
+                "column": "Fiscal Yr-Period"
+              },
+              {
+                "name": "Fiscal Yr-Wk",
+                "ordinal": 3,
+                "column": "Fiscal Yr-Wk"
+              },
+              {
+                "name": "Date",
+                "ordinal": 4,
+                "column": "Date"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "SELECT ",
+              "* FROM ",
+              "[BI].[vDim_FinDate]"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Date"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+              "* FROM ",
+              "[BI].[vDim_FinDate]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Promotion",
+        "columns": [
+          {
+            "name": "PromotionKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "PromotionKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Discount Percentage",
+            "dataType": "double",
+            "sourceColumn": "Discount Percentage",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "Promotion",
+            "dataType": "string",
+            "sourceColumn": "Promotion",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Promotion Type",
+            "dataType": "string",
+            "sourceColumn": "Promotion Type",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Start Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Start Date",
+            "formatString": "Short Date",
+            "sourceProviderType": "Date",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeShortDatePattern\" />"
+              }
+            ]
+          },
+          {
+            "name": "End Date",
+            "dataType": "dateTime",
+            "sourceColumn": "End Date",
+            "formatString": "Short Date",
+            "sourceProviderType": "Date",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeShortDatePattern\" />"
+              }
+            ]
+          },
+          {
+            "name": "Max Quantity",
+            "dataType": "int64",
+            "sourceColumn": "Max Quantity",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Min Quantity",
+            "dataType": "int64",
+            "sourceColumn": "Min Quantity",
+            "sourceProviderType": "Integer"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Promotion",
+            "dataView": "full",
+            "source": {
+              "query": [
+                "SELECT ",
+                "       *",
+                "  FROM ",
+                "[BI].[vDim_Promotion]"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "       *",
+                  "  FROM ",
+                  "[BI].[vDim_Promotion]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Promotion Hierarchy",
+            "levels": [
+              {
+                "name": "Promotion Type",
+                "ordinal": 0,
+                "column": "Promotion Type"
+              },
+              {
+                "name": "Promotion",
+                "ordinal": 1,
+                "column": "Promotion"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "SELECT ",
+              "       *",
+              "  FROM ",
+              "[BI].[vDim_Promotion]"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Promotion"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+              "       *",
+              "  FROM ",
+              "[BI].[vDim_Promotion]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Customer",
+        "columns": [
+          {
+            "name": "Address Line 1",
+            "dataType": "string",
+            "sourceColumn": "Address Line 1",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Street Address",
+            "dataType": "string",
+            "sourceColumn": "Street Address",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Date of Birth",
+            "dataType": "dateTime",
+            "sourceColumn": "Date of Birth",
+            "formatString": "Short Date",
+            "sourceProviderType": "Date",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeShortDatePattern\" />"
+              }
+            ]
+          },
+          {
+            "name": "Commute Distance",
+            "dataType": "string",
+            "sourceColumn": "Commute Distance",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "First Purchase Date",
+            "dataType": "dateTime",
+            "sourceColumn": "First Purchase Date",
+            "formatString": "Short Date",
+            "sourceProviderType": "Date",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeShortDatePattern\" />"
+              }
+            ]
+          },
+          {
+            "name": "Education",
+            "dataType": "string",
+            "sourceColumn": "Education",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Occupation",
+            "dataType": "string",
+            "sourceColumn": "Occupation",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "House Owner Flag",
+            "dataType": "string",
+            "sourceColumn": "House Owner Flag",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "First Name",
+            "dataType": "string",
+            "sourceColumn": "First Name",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Customer Name",
+            "dataType": "string",
+            "sourceColumn": "Customer Name",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Cars Owned",
+            "dataType": "int64",
+            "sourceColumn": "Cars Owned",
+            "sourceProviderType": "UnsignedTinyInt"
+          },
+          {
+            "name": "Marital Status",
+            "dataType": "string",
+            "sourceColumn": "Marital Status",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Children",
+            "dataType": "int64",
+            "sourceColumn": "Children",
+            "sourceProviderType": "UnsignedTinyInt"
+          },
+          {
+            "name": "Phone Number",
+            "dataType": "string",
+            "sourceColumn": "Phone Number",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Annual Income",
+            "dataType": "double",
+            "sourceColumn": "Annual Income",
+            "sourceProviderType": "Decimal"
+          },
+          {
+            "name": "Customer City",
+            "dataType": "string",
+            "sourceColumn": "Customer City",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Country Code",
+            "dataType": "string",
+            "sourceColumn": "Country Code",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "SalesTerritoryKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "SalesTerritoryKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Customer Sales Territory Country",
+            "dataType": "string",
+            "sourceColumn": "Customer Sales Territory Country"
+          },
+          {
+            "name": "Customer Sales Territory Group",
+            "dataType": "string",
+            "sourceColumn": "Customer Sales Territory Group"
+          },
+          {
+            "name": "Customer Sales Territory Region",
+            "dataType": "string",
+            "sourceColumn": "Customer Sales Territory Region"
+          },
+          {
+            "name": "Customer Key",
+            "dataType": "int64",
+            "sourceColumn": "Customer Key"
+          },
+          {
+            "name": "Last Name",
+            "dataType": "string",
+            "sourceColumn": "Last Name"
+          },
+          {
+            "name": "Middle Name",
+            "dataType": "string",
+            "sourceColumn": "Middle Name"
+          },
+          {
+            "name": "Title",
+            "dataType": "string",
+            "sourceColumn": "Title"
+          },
+          {
+            "name": "Customer Alternate Key",
+            "dataType": "string",
+            "sourceColumn": "Customer Alternate Key"
+          },
+          {
+            "name": "Customer Email Address",
+            "dataType": "string",
+            "sourceColumn": "Customer Email Address"
+          },
+          {
+            "name": "Customer Gender",
+            "dataType": "string",
+            "sourceColumn": "Customer Gender"
+          },
+          {
+            "name": "Customer Country",
+            "dataType": "string",
+            "sourceColumn": "Customer Country"
+          },
+          {
+            "name": "Customer Postal Code",
+            "dataType": "string",
+            "sourceColumn": "Customer Postal Code"
+          },
+          {
+            "name": "Customer State Province",
+            "dataType": "string",
+            "sourceColumn": "Customer State Province"
+          },
+          {
+            "name": "Customer State Province Code",
+            "dataType": "string",
+            "sourceColumn": "Customer State Province Code"
+          },
+          {
+            "name": "City State",
+            "dataType": "string",
+            "sourceColumn": "City State"
+          },
+          {
+            "name": "City State Country",
+            "dataType": "string",
+            "sourceColumn": "City State Country"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Customer",
+            "dataView": "full",
+            "source": {
+              "query": [
+                "SELECT *",
+                "  FROM [BI].[vDim_Customer]"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT *",
+                  "  FROM [BI].[vDim_Customer]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Customer Sales Territory Hierarchy",
+            "levels": [
+              {
+                "name": "Customer Sales Territory Group",
+                "ordinal": 0,
+                "column": "Customer Sales Territory Group"
+              },
+              {
+                "name": "Customer Sales Territory Country",
+                "ordinal": 1,
+                "column": "Customer Sales Territory Country"
+              },
+              {
+                "name": "Customer Sales Territory Region",
+                "ordinal": 2,
+                "column": "Customer Sales Territory Region"
+              }
+            ]
+          },
+          {
+            "name": "Customer Geography Hierarchy",
+            "levels": [
+              {
+                "name": "Customer City",
+                "ordinal": 0,
+                "column": "Customer City"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "SELECT *",
+              "  FROM [BI].[vDim_Customer]"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Customer"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT *",
+              "  FROM [BI].[vDim_Customer]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Currency",
+        "columns": [
+          {
+            "name": "CurrencyKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "CurrencyKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Currency",
+            "dataType": "string",
+            "sourceColumn": "Currency",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Currency Abbrev",
+            "dataType": "string",
+            "sourceColumn": "Currency Abbrev",
+            "sourceProviderType": "VarChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Currency",
+            "dataView": "full",
+            "source": {
+              "query": [
+                "SELECT ",
+                "* FROM ",
+                "[BI].[vDim_Currency]"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "* FROM ",
+                  "[BI].[vDim_Currency]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "SELECT ",
+              "* FROM ",
+              "[BI].[vDim_Currency]"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Currency"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+              "* FROM ",
+              "[BI].[vDim_Currency]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Product",
+        "columns": [
+          {
+            "name": "Product Class",
+            "dataType": "string",
+            "sourceColumn": "Product Class",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Product Color",
+            "dataType": "string",
+            "sourceColumn": "Product Color",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Days to Manufacture",
+            "dataType": "int64",
+            "sourceColumn": "Days to Manufacture",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Dealer Price",
+            "dataType": "double",
+            "sourceColumn": "Dealer Price",
+            "sourceProviderType": "Decimal"
+          },
+          {
+            "name": "Product Start Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Product Start Date",
+            "formatString": "Short Date",
+            "sourceProviderType": "Date",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeShortDatePattern\" />"
+              }
+            ]
+          },
+          {
+            "name": "Product End Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Product End Date",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          },
+          {
+            "name": "Product Description",
+            "dataType": "string",
+            "sourceColumn": "Product Description",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Product Name",
+            "dataType": "string",
+            "sourceColumn": "Product Name",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Finished Goods Flag",
+            "dataType": "string",
+            "sourceColumn": "Finished Goods Flag",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "List Price",
+            "dataType": "double",
+            "sourceColumn": "List Price",
+            "sourceProviderType": "Decimal"
+          },
+          {
+            "name": "Product Model",
+            "dataType": "string",
+            "sourceColumn": "Product Model",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Product Weight",
+            "dataType": "double",
+            "sourceColumn": "Product Weight",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "Product Style",
+            "dataType": "string",
+            "sourceColumn": "Product Style",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Standard Cost",
+            "dataType": "double",
+            "sourceColumn": "Standard Cost",
+            "sourceProviderType": "Decimal"
+          },
+          {
+            "name": "Product line",
+            "dataType": "string",
+            "sourceColumn": "Product line",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Product Status",
+            "dataType": "string",
+            "sourceColumn": "Product Status",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Product Subcategory",
+            "dataType": "string",
+            "sourceColumn": "Product Subcategory",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Product Category",
+            "dataType": "string",
+            "sourceColumn": "Product Category",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Product Safety Stock Level",
+            "dataType": "int64",
+            "sourceColumn": "Product Safety Stock Level"
+          },
+          {
+            "name": "Product Key",
+            "dataType": "int64",
+            "sourceColumn": "Product Key"
+          },
+          {
+            "name": "Product Category Group",
+            "dataType": "string",
+            "sourceColumn": "Product Category Group"
+          },
+          {
+            "name": "Product Alternate Key",
+            "dataType": "string",
+            "sourceColumn": "Product Alternate Key"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Product",
+            "dataView": "full",
+            "source": {
+              "query": [
+                "SELECT ",
+                "* ",
+                "FROM [BI].[vDim_Product]"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "* ",
+                  "FROM [BI].[vDim_Product]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Product Hierarchy",
+            "levels": [
+              {
+                "name": "Product Category",
+                "ordinal": 0,
+                "column": "Product Category"
+              },
+              {
+                "name": "Product Subcategory",
+                "ordinal": 1,
+                "column": "Product Subcategory"
+              },
+              {
+                "name": "Product Name",
+                "ordinal": 2,
+                "column": "Product Name"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "SELECT ",
+              "* ",
+              "FROM [BI].[vDim_Product]"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Product"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+              "* ",
+              "FROM [BI].[vDim_Product]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sales Territory",
+        "columns": [
+          {
+            "name": "SalesTerritoryKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "SalesTerritoryKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Sales Territory Group",
+            "dataType": "string",
+            "sourceColumn": "Sales Territory Group",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Sales Territory Country",
+            "dataType": "string",
+            "sourceColumn": "Sales Territory Country",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Sales Territory Region",
+            "dataType": "string",
+            "sourceColumn": "Sales Territory Region",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Sales Territory URL",
+            "dataType": "string",
+            "sourceColumn": "Sales Territory URL"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Sales Territory",
+            "dataView": "full",
+            "source": {
+              "query": [
+                "SELECT ",
+                "* FROM ",
+                "[BI].[vDim_SalesTerritory]"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "* FROM ",
+                  "[BI].[vDim_SalesTerritory]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Sales Territory Hierarchy",
+            "levels": [
+              {
+                "name": "Sales Territory Group",
+                "ordinal": 0,
+                "column": "Sales Territory Group"
+              },
+              {
+                "name": "Sales Territory Country",
+                "ordinal": 1,
+                "column": "Sales Territory Country"
+              },
+              {
+                "name": "Sales Territory Region",
+                "ordinal": 2,
+                "column": "Sales Territory Region"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "SELECT ",
+              "* FROM ",
+              "[BI].[vDim_SalesTerritory]"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Sales Territory"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+              "* FROM ",
+              "[BI].[vDim_SalesTerritory]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Finance",
+        "isHidden": true,
+        "columns": [
+          {
+            "name": "DateKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "DateKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "AccountKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "AccountKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ScenarioKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "ScenarioKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "DepartmentGroupKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "DepartmentGroupKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "OrganizationKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "OrganizationKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Amount",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "Amount",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "GL Entry Date",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "GL Entry Date"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Finance",
+            "source": {
+              "query": [
+                "SELECT ",
+                "",
+                "Top",
+                " 0",
+                "*",
+                "  FROM [BI].[vFact_Finance]"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "",
+                  "Top",
+                  " 0",
+                  "*",
+                  "  FROM [BI].[vFact_Finance]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Finance-2010",
+            "mode": "import",
+            "source": {
+              "query": [
+                "SELECT ",
+                "\t* FROM [BI].[vFact_Finance]",
+                "  WHERE DateKey Between 20100101 and 20101231"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "\t* FROM [BI].[vFact_Finance]",
+                  "  WHERE DateKey Between 20100101 and 20101231</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Finance-2011",
+            "mode": "import",
+            "source": {
+              "query": [
+                "SELECT ",
+                "\t* FROM [BI].[vFact_Finance]",
+                "  WHERE DateKey Between 20110101 and 20111231"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "\t* FROM [BI].[vFact_Finance]",
+                  "  WHERE DateKey Between 20110101 and 20111231</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Finance-2012",
+            "mode": "import",
+            "source": {
+              "query": [
+                "SELECT ",
+                "\t*",
+                "  FROM [BI].[vFact_Finance]",
+                "  WHERE DateKey Between 20120101 and 20121231"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "\t*",
+                  "  FROM [BI].[vFact_Finance]",
+                  "  WHERE DateKey Between 20120101 and 20121231</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Finance-2013",
+            "mode": "import",
+            "source": {
+              "query": [
+                "SELECT ",
+                " *",
+                "  FROM [BI].[vFact_Finance]",
+                "  WHERE DateKey Between 20130101 and 20131231"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  " *",
+                  "  FROM [BI].[vFact_Finance]",
+                  "  WHERE DateKey Between 20130101 and 20131231</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Finance-2014",
+            "mode": "import",
+            "source": {
+              "query": [
+                "SELECT ",
+                "\t*",
+                "  FROM [BI].[vFact_Finance]",
+                "  WHERE DateKey Between 20140101 and 20141231"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "\t*",
+                  "  FROM [BI].[vFact_Finance]",
+                  "  WHERE DateKey Between 20140101 and 20141231</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Finance-2015",
+            "mode": "import",
+            "source": {
+              "query": [
+                "SELECT ",
+                "\t*",
+                "  FROM [BI].[vFact_Finance]",
+                "  WHERE DateKey Between 20150101 and 20151231"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "\t*",
+                  "  FROM [BI].[vFact_Finance]",
+                  "  WHERE DateKey Between 20150101 and 20151231</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Finance-2016",
+            "mode": "import",
+            "source": {
+              "query": [
+                "SELECT ",
+                "\t*",
+                "  FROM [BI].[vFact_Finance]",
+                "  WHERE DateKey Between 20160101 and 20161231"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "\t*",
+                  "  FROM [BI].[vFact_Finance]",
+                  "  WHERE DateKey Between 20160101 and 20161231</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Finance-2017",
+            "mode": "import",
+            "source": {
+              "query": [
+                "SELECT ",
+                "\t* FROM [BI].[vFact_Finance]",
+                "  WHERE DateKey Between 20170101 and 20171231"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "\t* FROM [BI].[vFact_Finance]",
+                  "  WHERE DateKey Between 20170101 and 20171231</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "measures": [
+          {
+            "name": "Finance Amount",
+            "expression": "sum(Finance[Amount])",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "displayFolder": "Finance",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Finance Distinct Accounts",
+            "expression": "DISTINCTCOUNT(Finance[AccountKey])",
+            "displayFolder": "Finance"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "SELECT ",
+              "",
+              "*",
+              "  FROM [BI].[vFact_Finance]"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Finance"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+              "",
+              "*",
+              "  FROM [BI].[vFact_Finance]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Account",
+        "columns": [
+          {
+            "name": "AccountKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "AccountKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Operator",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "Operator",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "ParentAccountKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "ParentAccountKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ValueType",
+            "dataType": "string",
+            "sourceColumn": "ValueType",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Account Code",
+            "dataType": "int64",
+            "sourceColumn": "Account Code"
+          },
+          {
+            "name": "Account Type",
+            "dataType": "string",
+            "sourceColumn": "Account Type"
+          },
+          {
+            "name": "Parent Account Code",
+            "dataType": "int64",
+            "sourceColumn": "Parent Account Code"
+          },
+          {
+            "name": "Account",
+            "dataType": "string",
+            "sourceColumn": "Account"
+          },
+          {
+            "name": "Parent Account",
+            "dataType": "string",
+            "sourceColumn": "Parent Account"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Account",
+            "dataView": "full",
+            "source": {
+              "query": [
+                "SELECT *",
+                "  FROM [BI].[vDim_Account]"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT *",
+                  "  FROM [BI].[vDim_Account]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Account Hierarchy",
+            "levels": [
+              {
+                "name": "Parent Account",
+                "ordinal": 0,
+                "column": "Parent Account"
+              },
+              {
+                "name": "Account",
+                "ordinal": 1,
+                "column": "Account"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "SELECT *",
+              "  FROM [BI].[vDim_Account]"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Account"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT *",
+              "  FROM [BI].[vDim_Account]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Scenario",
+        "columns": [
+          {
+            "name": "ScenarioKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "ScenarioKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Scenario",
+            "dataType": "string",
+            "sourceColumn": "Scenario",
+            "sourceProviderType": "VarChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Scenario",
+            "dataView": "full",
+            "source": {
+              "query": [
+                "SELECT ",
+                "* ",
+                "FROM ",
+                "[BI].[vDim_Scenario]"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "* ",
+                  "FROM ",
+                  "[BI].[vDim_Scenario]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "SELECT ",
+              "* ",
+              "FROM ",
+              "[BI].[vDim_Scenario]"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Scenario"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+              "* ",
+              "FROM ",
+              "[BI].[vDim_Scenario]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Organization",
+        "columns": [
+          {
+            "name": "Organization",
+            "dataType": "string",
+            "sourceColumn": "Organization",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Percentage of Ownership",
+            "dataType": "string",
+            "sourceColumn": "Percentage of Ownership",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Parent Organization",
+            "dataType": "string",
+            "sourceColumn": "Parent Organization",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "OrganizationKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "OrganizationKey"
+          },
+          {
+            "name": "Organization Currency",
+            "dataType": "string",
+            "sourceColumn": "Organization Currency"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Organization",
+            "dataView": "full",
+            "source": {
+              "query": [
+                "SELECT *",
+                "  FROM [BI].[vDim_Organization]"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT *",
+                  "  FROM [BI].[vDim_Organization]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Organization Hierarchy",
+            "levels": [
+              {
+                "name": "Parent Organization",
+                "ordinal": 0,
+                "column": "Parent Organization"
+              },
+              {
+                "name": "Organization",
+                "ordinal": 1,
+                "column": "Organization"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "SELECT *",
+              "  FROM [BI].[vDim_Organization]"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Organization"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT *",
+              "  FROM [BI].[vDim_Organization]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Department Group",
+        "columns": [
+          {
+            "name": "DepartmentGroupKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "DepartmentGroupKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Department Group",
+            "dataType": "string",
+            "sourceColumn": "Department Group",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Parent Group",
+            "dataType": "string",
+            "sourceColumn": "Parent Group",
+            "sourceProviderType": "VarChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Department Group",
+            "dataView": "full",
+            "source": {
+              "query": [
+                "SELECT ",
+                "* FROM [BI].[vDim_Department]"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "* FROM [BI].[vDim_Department]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Department Group Hierarchy",
+            "levels": [
+              {
+                "name": "Parent Group",
+                "ordinal": 0,
+                "column": "Parent Group"
+              },
+              {
+                "name": "Department Group",
+                "ordinal": 1,
+                "column": "Department Group"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "SELECT ",
+              "* FROM [BI].[vDim_Department]"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Department Group"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+              "* FROM [BI].[vDim_Department]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Reseller Sales",
+        "isHidden": true,
+        "columns": [
+          {
+            "name": "CurrencyKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "CurrencyKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "DueDateKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "DueDateKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "EmployeeKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "EmployeeKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "OrderDateKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "OrderDateKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ResellerKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "ResellerKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ProductKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "ProductKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "SalesTerritoryKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "SalesTerritoryKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "PromotionKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "PromotionKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "ShipDateKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "ShipDateKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "CustomerPONumber",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "CustomerPONumber",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "SalesOrderNumber",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "SalesOrderNumber",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Sales Amount",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "Sales Amount",
+            "sourceProviderType": "Decimal"
+          },
+          {
+            "name": "Discount Amount",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "Discount Amount",
+            "sourceProviderType": "Double"
+          },
+          {
+            "name": "Total Product Cost",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "Total Product Cost",
+            "sourceProviderType": "Decimal"
+          },
+          {
+            "name": "Freight",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "Freight",
+            "sourceProviderType": "Decimal"
+          },
+          {
+            "name": "Extended Amount",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "Extended Amount",
+            "sourceProviderType": "Decimal"
+          },
+          {
+            "name": "Order Quantity",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "Order Quantity",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "Tax Amount",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "Tax Amount",
+            "sourceProviderType": "Decimal"
+          },
+          {
+            "name": "Unit Price",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "Unit Price"
+          },
+          {
+            "name": "Order Date",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "Order Date"
+          },
+          {
+            "name": "Due Date",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "Due Date"
+          },
+          {
+            "name": "Ship Date",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "Ship Date"
+          },
+          {
+            "name": "Product Standard Cost",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "Product Standard Cost"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Reseller Sales",
+            "source": {
+              "query": [
+                "SELECT ",
+                "TOP 0",
+                " * FROM [BI].[vFact_ResellerSales]"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "TOP 0",
+                  " * FROM [BI].[vFact_ResellerSales]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Reseller Sales-2010",
+            "mode": "import",
+            "source": {
+              "query": [
+                "SELECT *  FROM [BI].[vFact_ResellerSales]",
+                "  Where",
+                "  [OrderDateKey] BETWEEN 20100101 AND 20101231"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT *  FROM [BI].[vFact_ResellerSales]",
+                  "  Where",
+                  "  [OrderDateKey] BETWEEN 20100101 AND 20101231</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Reseller Sales-2011",
+            "mode": "import",
+            "source": {
+              "query": [
+                "SELECT *",
+                "  FROM [BI].[vFact_ResellerSales]",
+                "  Where",
+                "  [OrderDateKey] BETWEEN 20110101 AND 20111231"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT *",
+                  "  FROM [BI].[vFact_ResellerSales]",
+                  "  Where",
+                  "  [OrderDateKey] BETWEEN 20110101 AND 20111231</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Reseller Sales-2012",
+            "mode": "import",
+            "source": {
+              "query": [
+                "SELECT *",
+                "  FROM [BI].[vFact_ResellerSales]",
+                "  Where",
+                "  [OrderDateKey] BETWEEN 20120101 AND 20121231"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT *",
+                  "  FROM [BI].[vFact_ResellerSales]",
+                  "  Where",
+                  "  [OrderDateKey] BETWEEN 20120101 AND 20121231</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Reseller Sales-2013",
+            "mode": "import",
+            "source": {
+              "query": [
+                "SELECT *",
+                "  FROM [BI].[vFact_ResellerSales]",
+                "  Where",
+                "  [OrderDateKey] BETWEEN 20130101 AND 20131231"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT *",
+                  "  FROM [BI].[vFact_ResellerSales]",
+                  "  Where",
+                  "  [OrderDateKey] BETWEEN 20130101 AND 20131231</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Reseller Sales-2014",
+            "mode": "import",
+            "source": {
+              "query": [
+                "SELECT *  FROM [BI].[vFact_ResellerSales]",
+                "  Where",
+                "  [OrderDateKey] BETWEEN 20140101 AND 20141231"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT *  FROM [BI].[vFact_ResellerSales]",
+                  "  Where",
+                  "  [OrderDateKey] BETWEEN 20140101 AND 20141231</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Reseller Sales-2015",
+            "mode": "import",
+            "source": {
+              "query": [
+                "SELECT *",
+                "  FROM [BI].[vFact_ResellerSales]",
+                "  Where",
+                "  [OrderDateKey] BETWEEN 20150101 AND 20151231"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT *",
+                  "  FROM [BI].[vFact_ResellerSales]",
+                  "  Where",
+                  "  [OrderDateKey] BETWEEN 20150101 AND 20151231</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Reseller Sales-2016",
+            "mode": "import",
+            "source": {
+              "query": [
+                "SELECT *",
+                "  FROM [BI].[vFact_ResellerSales]",
+                "  Where",
+                "  [OrderDateKey] BETWEEN 20160101 AND 20161231"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT *",
+                  "  FROM [BI].[vFact_ResellerSales]",
+                  "  Where",
+                  "  [OrderDateKey] BETWEEN 20160101 AND 20161231</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Reseller Sales-2017",
+            "mode": "import",
+            "source": {
+              "query": [
+                "SELECT *",
+                "  FROM [BI].[vFact_ResellerSales]",
+                "  Where",
+                "  [OrderDateKey] BETWEEN 20170101 AND 20171231"
+              ],
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT *",
+                  "  FROM [BI].[vFact_ResellerSales]",
+                  "  Where",
+                  "  [OrderDateKey] BETWEEN 20170101 AND 20171231</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "measures": [
+          {
+            "name": "Reseller Sales Amount",
+            "expression": "sum('Reseller Sales'[Sales Amount])",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "displayFolder": "Reseller Sales",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Reseller Sales Discount Amount",
+            "expression": "sum('Reseller Sales'[Discount Amount])",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "displayFolder": "Reseller Sales",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Reseller Sales Product Cost",
+            "expression": "sum('Reseller Sales'[Total Product Cost])",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "displayFolder": "Reseller Sales",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Reseller Sales Extended Amount",
+            "expression": "sum('Reseller Sales'[Extended Amount])",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "displayFolder": "Reseller Sales",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Reseller Sales Freight",
+            "expression": "sum('Reseller Sales'[Freight])",
+            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "displayFolder": "Reseller Sales",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Reseller Sales Order Quantity",
+            "expression": "sum('Reseller Sales'[Order Quantity])",
+            "formatString": "#,0",
+            "displayFolder": "Reseller Sales"
+          },
+          {
+            "name": "Reseller Sales Distinct POs",
+            "expression": "DISTINCTCOUNT('Reseller Sales'[CustomerPONumber])",
+            "formatString": "#,0",
+            "displayFolder": "Reseller Sales"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "SELECT *",
+              "  FROM [BI].[vFact_ResellerSales]"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Reseller Sales"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT *",
+              "  FROM [BI].[vFact_ResellerSales]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Reseller",
+        "columns": [
+          {
+            "name": "Reseller",
+            "dataType": "string",
+            "sourceColumn": "Reseller",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Year Opened",
+            "dataType": "int64",
+            "sourceColumn": "Year Opened",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Bank Name",
+            "dataType": "string",
+            "sourceColumn": "Bank Name",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Business Type",
+            "dataType": "string",
+            "sourceColumn": "Business Type",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Year of First Order",
+            "dataType": "int64",
+            "sourceColumn": "Year of First Order",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Year of Last Order",
+            "dataType": "int64",
+            "sourceColumn": "Year of Last Order",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Reseller Annual Sales",
+            "dataType": "decimal",
+            "sourceColumn": "Reseller Annual Sales",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "sourceProviderType": "Decimal",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Reseller Phone",
+            "dataType": "string",
+            "sourceColumn": "Reseller Phone",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Number of Employees",
+            "dataType": "int64",
+            "sourceColumn": "Number of Employees",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Annual Revenue",
+            "dataType": "decimal",
+            "sourceColumn": "Annual Revenue",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "sourceProviderType": "Decimal",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Reseller Address Line 1",
+            "dataType": "string",
+            "sourceColumn": "Reseller Address Line 1",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Reseller Address",
+            "dataType": "string",
+            "sourceColumn": "Reseller Address",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Reseller City",
+            "dataType": "string",
+            "sourceColumn": "Reseller City",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Reseller Country Code",
+            "dataType": "string",
+            "sourceColumn": "Reseller Country Code",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Reseller Country",
+            "dataType": "string",
+            "sourceColumn": "Reseller Country",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Reseller Zip Code",
+            "dataType": "string",
+            "sourceColumn": "Reseller Zip Code",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Reseller State Province",
+            "dataType": "string",
+            "sourceColumn": "Reseller State Province",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Reseller State Province Code",
+            "dataType": "string",
+            "sourceColumn": "Reseller State Province Code",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Minimum Payment Amt",
+            "dataType": "double",
+            "sourceColumn": "Minimum Payment Amt",
+            "sourceProviderType": "Decimal"
+          },
+          {
+            "name": "Reseller Product Line",
+            "dataType": "string",
+            "sourceColumn": "Reseller Product Line",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Reseller Order Frequency",
+            "dataType": "string",
+            "sourceColumn": "Reseller Order Frequency",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Reseller Order Month",
+            "dataType": "int64",
+            "sourceColumn": "Reseller Order Month",
+            "sourceProviderType": "UnsignedTinyInt"
+          },
+          {
+            "name": "Reseller Sales Territory Country",
+            "dataType": "string",
+            "sourceColumn": "Reseller Sales Territory Country",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Reseller Sales Territory Group",
+            "dataType": "string",
+            "sourceColumn": "Reseller Sales Territory Group",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Reseller Sales Territory Region",
+            "dataType": "string",
+            "sourceColumn": "Reseller Sales Territory Region",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Reseller Key",
+            "dataType": "int64",
+            "sourceColumn": "Reseller Key"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Reseller",
+            "dataView": "full",
+            "source": {
+              "query": "SELECT * FROM [BI].[vDim_Reseller]",
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT * FROM [BI].[vDim_Reseller]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+              }
+            ]
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Reseller Sales Territory Hierarchy",
+            "levels": [
+              {
+                "name": "Reseller Sales Territory Group",
+                "ordinal": 0,
+                "column": "Reseller Sales Territory Group"
+              },
+              {
+                "name": "Reseller Sales Territory Country",
+                "ordinal": 1,
+                "column": "Reseller Sales Territory Country"
+              },
+              {
+                "name": "Reseller Sales Territory Region",
+                "ordinal": 2,
+                "column": "Reseller Sales Territory Region"
+              }
+            ]
+          },
+          {
+            "name": "Reseller Geography Hierarchy",
+            "levels": [
+              {
+                "name": "Reseller Country",
+                "ordinal": 0,
+                "column": "Reseller Country"
+              },
+              {
+                "name": "Reseller State Province",
+                "ordinal": 1,
+                "column": "Reseller State Province"
+              },
+              {
+                "name": "Reseller Zip Code",
+                "ordinal": 3,
+                "column": "Reseller Zip Code"
+              },
+              {
+                "name": "Reseller Address",
+                "ordinal": 4,
+                "column": "Reseller Address"
+              },
+              {
+                "name": "Reseller City",
+                "ordinal": 2,
+                "column": "Reseller City"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": "SELECT * FROM [BI].[vDim_Reseller]"
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Reseller"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT * FROM [BI].[vDim_Reseller]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+          }
+        ]
+      },
+      {
+        "name": "Employee",
+        "columns": [
+          {
+            "name": "EmployeeKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "EmployeeKey",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Employee Last Name",
+            "dataType": "string",
+            "sourceColumn": "Employee Last Name",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Employee Name",
+            "dataType": "string",
+            "sourceColumn": "Employee Name",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Manager Last Name",
+            "dataType": "string",
+            "sourceColumn": "Manager Last Name",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Manager Name",
+            "dataType": "string",
+            "sourceColumn": "Manager Name",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Base Rate",
+            "dataType": "double",
+            "sourceColumn": "Base Rate",
+            "sourceProviderType": "Decimal"
+          },
+          {
+            "name": "Employee Email Address",
+            "dataType": "string",
+            "sourceColumn": "Employee Email Address",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Employee Department",
+            "dataType": "string",
+            "sourceColumn": "Employee Department",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Employee Gender",
+            "dataType": "string",
+            "sourceColumn": "Employee Gender",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "HireDate",
+            "dataType": "dateTime",
+            "sourceColumn": "HireDate",
+            "formatString": "Short Date",
+            "sourceProviderType": "Date",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeShortDatePattern\" />"
+              }
+            ]
+          },
+          {
+            "name": "Employee Marital Status",
+            "dataType": "string",
+            "sourceColumn": "Employee Marital Status",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Pay Frequency",
+            "dataType": "int64",
+            "sourceColumn": "Pay Frequency",
+            "sourceProviderType": "UnsignedTinyInt"
+          },
+          {
+            "name": "Employee Title",
+            "dataType": "string",
+            "sourceColumn": "Employee Title",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Vacation Hours",
+            "dataType": "int64",
+            "sourceColumn": "Vacation Hours",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "Employee Phone",
+            "dataType": "string",
+            "sourceColumn": "Employee Phone",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Employee Login ID",
+            "dataType": "string",
+            "sourceColumn": "Employee Login ID",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Current Flag",
+            "dataType": "string",
+            "sourceColumn": "Current Flag",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Salaried Flag",
+            "dataType": "string",
+            "sourceColumn": "Salaried Flag",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Employee Status",
+            "dataType": "string",
+            "sourceColumn": "Employee Status",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Employee Sales Territory Country",
+            "dataType": "string",
+            "sourceColumn": "Employee Sales Territory Country",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Employee Sales Territory Group",
+            "dataType": "string",
+            "sourceColumn": "Employee Sales Territory Group",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Employee Sales Territory Region",
+            "dataType": "string",
+            "sourceColumn": "Employee Sales Territory Region",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "ParentEmployeeKey",
+            "dataType": "int64",
+            "sourceColumn": "ParentEmployeeKey"
+          },
+          {
+            "name": "Employee Alternate Key",
+            "dataType": "string",
+            "sourceColumn": "Employee Alternate Key"
+          },
+          {
+            "name": "Employee Row Start Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Employee Row Start Date"
+          },
+          {
+            "name": "Employee Row End Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Employee Row End Date"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Employee",
+            "dataView": "full",
+            "source": {
+              "query": "Select * From BI.vDim_Employee",
+              "dataSource": "SqlServer ATLAS AdventureworksDW2016CTP3"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>Select * From BI.vDim_Employee</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+              }
+            ]
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Employee Management Hierarchy",
+            "levels": [
+              {
+                "name": "Manager Name",
+                "ordinal": 0,
+                "column": "Manager Name"
+              },
+              {
+                "name": "Employee Name",
+                "ordinal": 1,
+                "column": "Employee Name"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": "Select * From BI.vDim_Employee"
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Employee"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>Select * From BI.vDim_Employee</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "9b156193-80d7-43a2-b048-df60f131a20c",
+        "fromTable": "Internet Sales",
+        "fromColumn": "PromotionKey",
+        "toTable": "Promotion",
+        "toColumn": "PromotionKey"
+      },
+      {
+        "name": "1fa28d49-ea31-47a7-9a84-8191aa7c6231",
+        "fromTable": "Internet Sales",
+        "fromColumn": "SalesTerritoryKey",
+        "toTable": "Sales Territory",
+        "toColumn": "SalesTerritoryKey"
+      },
+      {
+        "name": "b8b930b2-b131-45b8-99b9-0f877237ffe8",
+        "fromTable": "Internet Sales",
+        "fromColumn": "CurrencyKey",
+        "toTable": "Currency",
+        "toColumn": "CurrencyKey"
+      },
+      {
+        "name": "3af90d3f-76aa-434b-a8e3-c705d84a5c45",
+        "fromTable": "Finance",
+        "fromColumn": "AccountKey",
+        "toTable": "Account",
+        "toColumn": "AccountKey"
+      },
+      {
+        "name": "f657f6c3-bc46-4595-ab79-33eaa093fb1a",
+        "fromTable": "Finance",
+        "fromColumn": "ScenarioKey",
+        "toTable": "Scenario",
+        "toColumn": "ScenarioKey"
+      },
+      {
+        "name": "4c7d6e01-711e-497e-aa4b-8c5b5d009912",
+        "fromTable": "Finance",
+        "fromColumn": "DepartmentGroupKey",
+        "toTable": "Department Group",
+        "toColumn": "DepartmentGroupKey"
+      },
+      {
+        "name": "38ed03bb-2c26-4eef-9316-538d5ad5a383",
+        "fromTable": "Finance",
+        "fromColumn": "OrganizationKey",
+        "toTable": "Organization",
+        "toColumn": "OrganizationKey"
+      },
+      {
+        "name": "2fe21a97-7a1c-4fc2-9a8d-4fdb24edbeb0",
+        "fromTable": "Reseller Sales",
+        "fromColumn": "CurrencyKey",
+        "toTable": "Currency",
+        "toColumn": "CurrencyKey"
+      },
+      {
+        "name": "3518ca24-d431-46d2-ae94-db921095a55a",
+        "fromTable": "Reseller Sales",
+        "fromColumn": "EmployeeKey",
+        "toTable": "Employee",
+        "toColumn": "EmployeeKey"
+      },
+      {
+        "name": "dfe13721-a773-486d-a957-171695a10e78",
+        "fromTable": "Reseller Sales",
+        "fromColumn": "SalesTerritoryKey",
+        "toTable": "Sales Territory",
+        "toColumn": "SalesTerritoryKey"
+      },
+      {
+        "name": "e739c2c3-a4ea-4097-aa8e-93f24db510c6",
+        "fromTable": "Reseller Sales",
+        "fromColumn": "PromotionKey",
+        "toTable": "Promotion",
+        "toColumn": "PromotionKey"
+      },
+      {
+        "name": "e0989512-1fe2-4a15-8d3c-052ecb1b29bb",
+        "fromTable": "Internet Sales",
+        "fromColumn": "OrderDateKey",
+        "toTable": "Date",
+        "toColumn": "Date Key"
+      },
+      {
+        "name": "0cba0d08-444e-4a03-92b2-d88f7483c879",
+        "fromTable": "Internet Sales",
+        "fromColumn": "CustomerKey",
+        "toTable": "Customer",
+        "toColumn": "Customer Key"
+      },
+      {
+        "name": "c1692e46-bce7-4645-8a60-50de6419d7e5",
+        "fromTable": "Internet Sales",
+        "fromColumn": "ProductKey",
+        "toTable": "Product",
+        "toColumn": "Product Key"
+      },
+      {
+        "name": "74d9cb1f-9a51-4617-a87e-edb38063380d",
+        "fromTable": "Reseller Sales",
+        "fromColumn": "OrderDateKey",
+        "toTable": "Date",
+        "toColumn": "Date Key"
+      },
+      {
+        "name": "5ac39f3f-83f9-4c4d-8c78-4e24c93a709b",
+        "fromTable": "Reseller Sales",
+        "fromColumn": "ProductKey",
+        "toTable": "Product",
+        "toColumn": "Product Key"
+      }
+    ],
+    "perspectives": [
+      {
+        "name": "Internet Sales",
+        "tables": [
+          {
+            "name": "Currency",
+            "columns": [
+              {
+                "name": "Currency"
+              },
+              {
+                "name": "Currency Abbrev"
+              },
+              {
+                "name": "CurrencyKey"
+              }
+            ]
+          },
+          {
+            "name": "Customer",
+            "columns": [
+              {
+                "name": "Address Line 1"
+              },
+              {
+                "name": "Annual Income"
+              },
+              {
+                "name": "Cars Owned"
+              },
+              {
+                "name": "Children"
+              },
+              {
+                "name": "Commute Distance"
+              },
+              {
+                "name": "Country Code"
+              },
+              {
+                "name": "Customer City"
+              },
+              {
+                "name": "Customer Name"
+              },
+              {
+                "name": "Customer Sales Territory Country"
+              },
+              {
+                "name": "Customer Sales Territory Group"
+              },
+              {
+                "name": "Customer Sales Territory Region"
+              },
+              {
+                "name": "Date of Birth"
+              },
+              {
+                "name": "Education"
+              },
+              {
+                "name": "First Name"
+              },
+              {
+                "name": "First Purchase Date"
+              },
+              {
+                "name": "House Owner Flag"
+              },
+              {
+                "name": "Marital Status"
+              },
+              {
+                "name": "Occupation"
+              },
+              {
+                "name": "Phone Number"
+              },
+              {
+                "name": "SalesTerritoryKey"
+              },
+              {
+                "name": "Street Address"
+              }
+            ]
+          },
+          {
+            "name": "Date",
+            "columns": [
+              {
+                "name": "Calendar Month"
+              },
+              {
+                "name": "Calendar Year"
+              },
+              {
+                "name": "Calendar Yr-Mo"
+              },
+              {
+                "name": "Calendar Yr-Qtr"
+              },
+              {
+                "name": "Calendar Yr-Wk"
+              },
+              {
+                "name": "Date"
+              },
+              {
+                "name": "Fiscal Date Last Year"
+              },
+              {
+                "name": "Fiscal Period"
+              },
+              {
+                "name": "Fiscal Quarter"
+              },
+              {
+                "name": "Fiscal Week of Period"
+              },
+              {
+                "name": "Fiscal Week Sequence"
+              },
+              {
+                "name": "Fiscal Week Sort"
+              },
+              {
+                "name": "Fiscal Year"
+              },
+              {
+                "name": "Fiscal Yr-Period"
+              },
+              {
+                "name": "Fiscal Yr-Period Sort"
+              },
+              {
+                "name": "Fiscal Yr-Qtr"
+              },
+              {
+                "name": "Fiscal Yr-Qtr Sort"
+              },
+              {
+                "name": "Fiscal Yr-Wk"
+              },
+              {
+                "name": "Fiscal Yr-Wk Sort"
+              },
+              {
+                "name": "Weekday"
+              },
+              {
+                "name": "Weekday Abb"
+              },
+              {
+                "name": "Weekday Sort"
+              }
+            ]
+          },
+          {
+            "name": "Internet Sales",
+            "columns": [
+              {
+                "name": "CurrencyKey"
+              },
+              {
+                "name": "CustomerKey"
+              },
+              {
+                "name": "Discount Amount"
+              },
+              {
+                "name": "DueDateKey"
+              },
+              {
+                "name": "Freight"
+              },
+              {
+                "name": "Order Quantity"
+              },
+              {
+                "name": "OrderDateKey"
+              },
+              {
+                "name": "ProductKey"
+              },
+              {
+                "name": "PromotionKey"
+              },
+              {
+                "name": "Sales Amount"
+              },
+              {
+                "name": "Sales order number"
+              },
+              {
+                "name": "SalesTerritoryKey"
+              },
+              {
+                "name": "ShipDateKey"
+              },
+              {
+                "name": "Tax Amount"
+              },
+              {
+                "name": "Total Product Cost"
+              }
+            ],
+            "measures": [
+              {
+                "name": "Internet Sales Amount"
+              },
+              {
+                "name": "Internet Sales Distinct Products"
+              },
+              {
+                "name": "Internet Sales Freight"
+              },
+              {
+                "name": "Internet Sales Order Quantity"
+              }
+            ]
+          },
+          {
+            "name": "Product",
+            "columns": [
+              {
+                "name": "Days to Manufacture"
+              },
+              {
+                "name": "Dealer Price"
+              },
+              {
+                "name": "Finished Goods Flag"
+              },
+              {
+                "name": "List Price"
+              },
+              {
+                "name": "Product Category"
+              },
+              {
+                "name": "Product Class"
+              },
+              {
+                "name": "Product Color"
+              },
+              {
+                "name": "Product Description"
+              },
+              {
+                "name": "Product End Date"
+              },
+              {
+                "name": "Product line"
+              },
+              {
+                "name": "Product Model"
+              },
+              {
+                "name": "Product Name"
+              },
+              {
+                "name": "Product Start Date"
+              },
+              {
+                "name": "Product Status"
+              },
+              {
+                "name": "Product Style"
+              },
+              {
+                "name": "Product Subcategory"
+              },
+              {
+                "name": "Product Weight"
+              },
+              {
+                "name": "Standard Cost"
+              }
+            ]
+          },
+          {
+            "name": "Promotion",
+            "columns": [
+              {
+                "name": "Discount Percentage"
+              },
+              {
+                "name": "End Date"
+              },
+              {
+                "name": "Max Quantity"
+              },
+              {
+                "name": "Min Quantity"
+              },
+              {
+                "name": "Promotion"
+              },
+              {
+                "name": "Promotion Type"
+              },
+              {
+                "name": "PromotionKey"
+              },
+              {
+                "name": "Start Date"
+              }
+            ]
+          },
+          {
+            "name": "Sales Territory",
+            "columns": [
+              {
+                "name": "Sales Territory Country"
+              },
+              {
+                "name": "Sales Territory Group"
+              },
+              {
+                "name": "Sales Territory Region"
+              },
+              {
+                "name": "SalesTerritoryKey"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Finance",
+        "tables": [
+          {
+            "name": "Account",
+            "columns": [
+              {
+                "name": "Account Code"
+              },
+              {
+                "name": "Account Type"
+              },
+              {
+                "name": "AccountKey"
+              },
+              {
+                "name": "Operator"
+              },
+              {
+                "name": "Parent Account Code"
+              },
+              {
+                "name": "ParentAccountKey"
+              },
+              {
+                "name": "ValueType"
+              }
+            ]
+          },
+          {
+            "name": "Date",
+            "columns": [
+              {
+                "name": "Calendar Month"
+              },
+              {
+                "name": "Calendar Year"
+              },
+              {
+                "name": "Calendar Yr-Mo"
+              },
+              {
+                "name": "Calendar Yr-Qtr"
+              },
+              {
+                "name": "Calendar Yr-Wk"
+              },
+              {
+                "name": "Date"
+              },
+              {
+                "name": "Fiscal Date Last Year"
+              },
+              {
+                "name": "Fiscal Period"
+              },
+              {
+                "name": "Fiscal Quarter"
+              },
+              {
+                "name": "Fiscal Week of Period"
+              },
+              {
+                "name": "Fiscal Week Sequence"
+              },
+              {
+                "name": "Fiscal Week Sort"
+              },
+              {
+                "name": "Fiscal Year"
+              },
+              {
+                "name": "Fiscal Yr-Period"
+              },
+              {
+                "name": "Fiscal Yr-Period Sort"
+              },
+              {
+                "name": "Fiscal Yr-Qtr"
+              },
+              {
+                "name": "Fiscal Yr-Qtr Sort"
+              },
+              {
+                "name": "Fiscal Yr-Wk"
+              },
+              {
+                "name": "Fiscal Yr-Wk Sort"
+              },
+              {
+                "name": "Weekday"
+              },
+              {
+                "name": "Weekday Abb"
+              },
+              {
+                "name": "Weekday Sort"
+              }
+            ]
+          },
+          {
+            "name": "Department Group",
+            "columns": [
+              {
+                "name": "Department Group"
+              },
+              {
+                "name": "DepartmentGroupKey"
+              },
+              {
+                "name": "Parent Group"
+              }
+            ]
+          },
+          {
+            "name": "Finance",
+            "columns": [
+              {
+                "name": "AccountKey"
+              },
+              {
+                "name": "Amount"
+              },
+              {
+                "name": "DateKey"
+              },
+              {
+                "name": "DepartmentGroupKey"
+              },
+              {
+                "name": "OrganizationKey"
+              },
+              {
+                "name": "ScenarioKey"
+              }
+            ],
+            "measures": [
+              {
+                "name": "Finance Amount"
+              },
+              {
+                "name": "Finance Distinct Accounts"
+              }
+            ]
+          },
+          {
+            "name": "Organization",
+            "columns": [
+              {
+                "name": "Organization"
+              },
+              {
+                "name": "Organization Currency"
+              },
+              {
+                "name": "OrganizationKey"
+              },
+              {
+                "name": "Parent Organization"
+              },
+              {
+                "name": "Percentage of Ownership"
+              }
+            ]
+          },
+          {
+            "name": "Scenario",
+            "columns": [
+              {
+                "name": "Scenario"
+              },
+              {
+                "name": "ScenarioKey"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Reseller Sales",
+        "tables": [
+          {
+            "name": "Currency",
+            "columns": [
+              {
+                "name": "Currency"
+              },
+              {
+                "name": "Currency Abbrev"
+              },
+              {
+                "name": "CurrencyKey"
+              }
+            ]
+          },
+          {
+            "name": "Date",
+            "columns": [
+              {
+                "name": "Calendar Month"
+              },
+              {
+                "name": "Calendar Year"
+              },
+              {
+                "name": "Calendar Yr-Mo"
+              },
+              {
+                "name": "Calendar Yr-Qtr"
+              },
+              {
+                "name": "Calendar Yr-Wk"
+              },
+              {
+                "name": "Date"
+              },
+              {
+                "name": "Fiscal Date Last Year"
+              },
+              {
+                "name": "Fiscal Period"
+              },
+              {
+                "name": "Fiscal Quarter"
+              },
+              {
+                "name": "Fiscal Week of Period"
+              },
+              {
+                "name": "Fiscal Week Sequence"
+              },
+              {
+                "name": "Fiscal Week Sort"
+              },
+              {
+                "name": "Fiscal Year"
+              },
+              {
+                "name": "Fiscal Yr-Period"
+              },
+              {
+                "name": "Fiscal Yr-Period Sort"
+              },
+              {
+                "name": "Fiscal Yr-Qtr"
+              },
+              {
+                "name": "Fiscal Yr-Qtr Sort"
+              },
+              {
+                "name": "Fiscal Yr-Wk"
+              },
+              {
+                "name": "Fiscal Yr-Wk Sort"
+              },
+              {
+                "name": "Weekday"
+              },
+              {
+                "name": "Weekday Abb"
+              },
+              {
+                "name": "Weekday Sort"
+              }
+            ],
+            "hierarchies": [
+              {
+                "name": "Calendar Hierarchy"
+              }
+            ]
+          },
+          {
+            "name": "Employee",
+            "columns": [
+              {
+                "name": "Base Rate"
+              },
+              {
+                "name": "Current Flag"
+              },
+              {
+                "name": "Employee Department"
+              },
+              {
+                "name": "Employee Email Address"
+              },
+              {
+                "name": "Employee Gender"
+              },
+              {
+                "name": "Employee Last Name"
+              },
+              {
+                "name": "Employee Login ID"
+              },
+              {
+                "name": "Employee Marital Status"
+              },
+              {
+                "name": "Employee Name"
+              },
+              {
+                "name": "Employee Phone"
+              },
+              {
+                "name": "Employee Sales Territory Country"
+              },
+              {
+                "name": "Employee Sales Territory Group"
+              },
+              {
+                "name": "Employee Sales Territory Region"
+              },
+              {
+                "name": "Employee Status"
+              },
+              {
+                "name": "Employee Title"
+              },
+              {
+                "name": "EmployeeKey"
+              },
+              {
+                "name": "HireDate"
+              },
+              {
+                "name": "Manager Last Name"
+              },
+              {
+                "name": "Manager Name"
+              },
+              {
+                "name": "Pay Frequency"
+              },
+              {
+                "name": "Salaried Flag"
+              },
+              {
+                "name": "Vacation Hours"
+              }
+            ]
+          },
+          {
+            "name": "Product",
+            "columns": [
+              {
+                "name": "Days to Manufacture"
+              },
+              {
+                "name": "Dealer Price"
+              },
+              {
+                "name": "Finished Goods Flag"
+              },
+              {
+                "name": "List Price"
+              },
+              {
+                "name": "Product Category"
+              },
+              {
+                "name": "Product Class"
+              },
+              {
+                "name": "Product Color"
+              },
+              {
+                "name": "Product Description"
+              },
+              {
+                "name": "Product End Date"
+              },
+              {
+                "name": "Product line"
+              },
+              {
+                "name": "Product Model"
+              },
+              {
+                "name": "Product Name"
+              },
+              {
+                "name": "Product Start Date"
+              },
+              {
+                "name": "Product Status"
+              },
+              {
+                "name": "Product Style"
+              },
+              {
+                "name": "Product Subcategory"
+              },
+              {
+                "name": "Product Weight"
+              },
+              {
+                "name": "Standard Cost"
+              }
+            ]
+          },
+          {
+            "name": "Promotion",
+            "columns": [
+              {
+                "name": "Discount Percentage"
+              },
+              {
+                "name": "End Date"
+              },
+              {
+                "name": "Max Quantity"
+              },
+              {
+                "name": "Min Quantity"
+              },
+              {
+                "name": "Promotion"
+              },
+              {
+                "name": "Promotion Type"
+              },
+              {
+                "name": "PromotionKey"
+              },
+              {
+                "name": "Start Date"
+              }
+            ]
+          },
+          {
+            "name": "Reseller",
+            "columns": [
+              {
+                "name": "Annual Revenue"
+              },
+              {
+                "name": "Bank Name"
+              },
+              {
+                "name": "Business Type"
+              },
+              {
+                "name": "Minimum Payment Amt"
+              },
+              {
+                "name": "Number of Employees"
+              },
+              {
+                "name": "Reseller"
+              },
+              {
+                "name": "Reseller Address"
+              },
+              {
+                "name": "Reseller Address Line 1"
+              },
+              {
+                "name": "Reseller Annual Sales"
+              },
+              {
+                "name": "Reseller City"
+              },
+              {
+                "name": "Reseller Country"
+              },
+              {
+                "name": "Reseller Country Code"
+              },
+              {
+                "name": "Reseller Order Frequency"
+              },
+              {
+                "name": "Reseller Order Month"
+              },
+              {
+                "name": "Reseller Phone"
+              },
+              {
+                "name": "Reseller Product Line"
+              },
+              {
+                "name": "Reseller Sales Territory Country"
+              },
+              {
+                "name": "Reseller Sales Territory Group"
+              },
+              {
+                "name": "Reseller Sales Territory Region"
+              },
+              {
+                "name": "Reseller State Province"
+              },
+              {
+                "name": "Reseller State Province Code"
+              },
+              {
+                "name": "Reseller Zip Code"
+              },
+              {
+                "name": "Year of First Order"
+              },
+              {
+                "name": "Year of Last Order"
+              },
+              {
+                "name": "Year Opened"
+              }
+            ]
+          },
+          {
+            "name": "Reseller Sales",
+            "columns": [
+              {
+                "name": "CurrencyKey"
+              },
+              {
+                "name": "CustomerPONumber"
+              },
+              {
+                "name": "Discount Amount"
+              },
+              {
+                "name": "DueDateKey"
+              },
+              {
+                "name": "EmployeeKey"
+              },
+              {
+                "name": "Extended Amount"
+              },
+              {
+                "name": "Freight"
+              },
+              {
+                "name": "Order Quantity"
+              },
+              {
+                "name": "OrderDateKey"
+              },
+              {
+                "name": "ProductKey"
+              },
+              {
+                "name": "PromotionKey"
+              },
+              {
+                "name": "ResellerKey"
+              },
+              {
+                "name": "Sales Amount"
+              },
+              {
+                "name": "SalesOrderNumber"
+              },
+              {
+                "name": "SalesTerritoryKey"
+              },
+              {
+                "name": "ShipDateKey"
+              },
+              {
+                "name": "Tax Amount"
+              },
+              {
+                "name": "Total Product Cost"
+              }
+            ],
+            "measures": [
+              {
+                "name": "Reseller Sales Amount"
+              },
+              {
+                "name": "Reseller Sales Discount Amount"
+              },
+              {
+                "name": "Reseller Sales Distinct POs"
+              },
+              {
+                "name": "Reseller Sales Extended Amount"
+              },
+              {
+                "name": "Reseller Sales Freight"
+              },
+              {
+                "name": "Reseller Sales Order Quantity"
+              },
+              {
+                "name": "Reseller Sales Product Cost"
+              }
+            ]
+          },
+          {
+            "name": "Sales Territory",
+            "columns": [
+              {
+                "name": "Sales Territory Country"
+              },
+              {
+                "name": "Sales Territory Group"
+              },
+              {
+                "name": "Sales Territory Region"
+              },
+              {
+                "name": "SalesTerritoryKey"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}

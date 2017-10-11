@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>AW2016Import</DataSourceReference>
+      <CommandText>/*
+Dynamically calculate the date, month, and year with built in DAX functions
+Optionally extend this code to lookup values 
+against a 'Date' dimension with LOOKUPVALUE per example below (subtracted values from 
+today to 
+*/
+Evaluate
+Row
+(
+"Today",
+TODAY(),
+"Yesterday",
+TODAY() - 1,
+"ThisMonth",
+MONTH(TODAY()),
+"NextMonth",
+IF
+(
+MONTH(TODAY()) &lt;&gt; 12, MONTH(TODAY()) + 1,
+1
+),
+"LastMonth",
+IF
+(
+MONTH(TODAY()) &lt;&gt; 1, MONTH(TODAY()) - 1,
+12
+),
+"ThisYear",
+YEAR(TODAY()),
+"LastYear",
+YEAR(TODAY())-1,
+"NextYear",
+YEAR(TODAY())+1,
+"TodayFiscalYear",
+LOOKUPVALUE
+(
+'Date'[Fiscal Year],'Date'[Date],Today()-1200
+)
+)</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+          <CommandType>DMX</CommandType>
+          <Type>Query</Type>
+          <QuerySpecification xsi:type="DMXQuerySpecification">
+            <Select>
+              <Items>
+                <Item>
+                  <ID xsi:type="Column">
+                    <ColumnName>[Today]</ColumnName>
+                  </ID>
+                  <ItemCaption>[Today]</ItemCaption>
+                </Item>
+                <Item>
+                  <ID xsi:type="Column">
+                    <ColumnName>[Yesterday]</ColumnName>
+                  </ID>
+                  <ItemCaption>[Yesterday]</ItemCaption>
+                </Item>
+                <Item>
+                  <ID xsi:type="Column">
+                    <ColumnName>[ThisMonth]</ColumnName>
+                  </ID>
+                  <ItemCaption>[ThisMonth]</ItemCaption>
+                </Item>
+                <Item>
+                  <ID xsi:type="Column">
+                    <ColumnName>[NextMonth]</ColumnName>
+                  </ID>
+                  <ItemCaption>[NextMonth]</ItemCaption>
+                </Item>
+                <Item>
+                  <ID xsi:type="Column">
+                    <ColumnName>[LastMonth]</ColumnName>
+                  </ID>
+                  <ItemCaption>[LastMonth]</ItemCaption>
+                </Item>
+                <Item>
+                  <ID xsi:type="Column">
+                    <ColumnName>[ThisYear]</ColumnName>
+                  </ID>
+                  <ItemCaption>[ThisYear]</ItemCaption>
+                </Item>
+                <Item>
+                  <ID xsi:type="Column">
+                    <ColumnName>[LastYear]</ColumnName>
+                  </ID>
+                  <ItemCaption>[LastYear]</ItemCaption>
+                </Item>
+                <Item>
+                  <ID xsi:type="Column">
+                    <ColumnName>[NextYear]</ColumnName>
+                  </ID>
+                  <ItemCaption>[NextYear]</ItemCaption>
+                </Item>
+                <Item>
+                  <ID xsi:type="Column">
+                    <ColumnName>[TodayFiscalYear]</ColumnName>
+                  </ID>
+                  <ItemCaption>[TodayFiscalYear]</ItemCaption>
+                </Item>
+              </Items>
+            </Select>
+            <Data>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;DataminingQueryBuilderState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;SelectTablesControlState&gt;
+    &lt;Tables /&gt;
+  &lt;/SelectTablesControlState&gt;
+  &lt;IsSingletonQuery&gt;false&lt;/IsSingletonQuery&gt;
+  &lt;View&gt;Text&lt;/View&gt;
+  &lt;QueryText&gt;/*
+Dynamically calculate the date, month, and year with built in DAX functions
+Optionally extend this code to lookup values 
+against a 'Date' dimension with LOOKUPVALUE per example below (subtracted values from 
+today to 
+*/
+Evaluate
+Row
+(
+"Today",
+TODAY(),
+"Yesterday",
+TODAY() - 1,
+"ThisMonth",
+MONTH(TODAY()),
+"NextMonth",
+IF
+(
+MONTH(TODAY()) &amp;lt;&amp;gt; 12, MONTH(TODAY()) + 1,
+1
+),
+"LastMonth",
+IF
+(
+MONTH(TODAY()) &amp;lt;&amp;gt; 1, MONTH(TODAY()) - 1,
+12
+),
+"ThisYear",
+YEAR(TODAY()),
+"LastYear",
+YEAR(TODAY())-1,
+"NextYear",
+YEAR(TODAY())+1,
+"TodayFiscalYear",
+LOOKUPVALUE
+(
+'Date'[Fiscal Year],'Date'[Date],Today()-1200
+)
+)&lt;/QueryText&gt;
+  &lt;DatabaseId /&gt;
+  &lt;MiningStructureId /&gt;
+  &lt;MiningModelId /&gt;
+  &lt;ColumnMappings /&gt;
+  &lt;GridRows /&gt;
+&lt;/DataminingQueryBuilderState&gt;</Data>
+          </QuerySpecification>
+          <Query>
+            <Statement>/*
+Dynamically calculate the date, month, and year with built in DAX functions
+Optionally extend this code to lookup values 
+against a 'Date' dimension with LOOKUPVALUE per example below (subtracted values from 
+today to 
+*/
+Evaluate
+Row
+(
+"Today",
+TODAY(),
+"Yesterday",
+TODAY() - 1,
+"ThisMonth",
+MONTH(TODAY()),
+"NextMonth",
+IF
+(
+MONTH(TODAY()) &lt;&gt; 12, MONTH(TODAY()) + 1,
+1
+),
+"LastMonth",
+IF
+(
+MONTH(TODAY()) &lt;&gt; 1, MONTH(TODAY()) - 1,
+12
+),
+"ThisYear",
+YEAR(TODAY()),
+"LastYear",
+YEAR(TODAY())-1,
+"NextYear",
+YEAR(TODAY())+1,
+"TodayFiscalYear",
+LOOKUPVALUE
+(
+'Date'[Fiscal Year],'Date'[Date],Today()-1200
+)
+)</Statement>
+            <ParameterDefinitions />
+          </Query>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="ID_Today_">
+        <DataField>[Today]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_Yesterday_">
+        <DataField>[Yesterday]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_ThisMonth_">
+        <DataField>[ThisMonth]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_NextMonth_">
+        <DataField>[NextMonth]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_LastMonth_">
+        <DataField>[LastMonth]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_ThisYear_">
+        <DataField>[ThisYear]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_LastYear_">
+        <DataField>[LastYear]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_NextYear_">
+        <DataField>[NextYear]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ID_TodayFiscalYear_">
+        <DataField>[TodayFiscalYear]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
