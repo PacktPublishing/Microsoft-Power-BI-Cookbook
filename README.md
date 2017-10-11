@@ -6,28 +6,19 @@ This book will provide thorough, technical examples of using all primary Power B
 ### Instructions and Navigations
 All of the codes are organized as per the chapters, each folder has all the images and asset files related to that.                   
 For example: Microsoft-Power-BI-Cookbook\Chapter02
-
-Following is the software list:
-
-| Chapter       | Software required
-| ------------- | -------------
-| 01-08         | Bohemian Sketch
-|               | Tumult Hype
-|               | Framer Studio
-|               | Adobe CC
-              
+            
 
 
 ## Related Products
  
   
-* [Google SketchUp for Game Design: Beginner's Guide](https://www.packtpub.com/game-development/google-sketchup-game-design-beginners-guide?utm_source=github&utm_medium=repository&utm_campaign=9781849691345)
+* [Mastering Microsoft Power BI](https://www.packtpub.com/big-data-and-business-intelligence/mastering-microsoft-power-bi?utm_source=github&utm_medium=repository&utm_campaign=9781788297233)
   
   
-* [UX Design for Web Developers [Video]](https://www.packtpub.com/web-development/ux-design-web-developers-video?utm_source=github&utm_medium=repository&utm_campaign=9781784392130)
+* [Microsoft Power BI Online [Video]](https://www.packtpub.com/big-data-and-business-intelligence/microsoft-power-bi-online-video?utm_source=github&utm_medium=repository&utm_campaign=9781788295352)
   
   
-* [Practical UX Design](https://www.packtpub.com/web-development/practical-ux-design?utm_source=github&utm_medium=repository&utm_campaign=9781785880896)
+* [Microsoft Power BI Recipes [Video]](https://www.packtpub.com/big-data-and-business-intelligence/microsoft-power-bi-recipes-video?utm_source=github&utm_medium=repository&utm_campaign=9781788291217)
   
  
 
