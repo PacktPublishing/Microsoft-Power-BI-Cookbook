@@ -1,14 +1,15 @@
 # Microsoft Power BI Cookbook
-[Microsoft Power BI Cookbook](https://www.packtpub.com/big-data-and-business-intelligence/microsoft-power-bi-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781788290142), published by [Packt](https://www.packtpub.com/) <img src="images/image_00_001.png" />
+[Microsoft Power BI Cookbook](https://www.packtpub.com/big-data-and-business-intelligence/microsoft-power-bi-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781788290142), published by [Packt](https://www.packtpub.com/) 
+<img src="images/image_00_001.png" />
 
-Get more out of Microsoft Power BI turning your data into actionable insights
+### Get more out of Microsoft Power BI turning your data into actionable insights
 
 ## What is this book about?
 <p>Microsoft Power BI is a business intelligence and analytics platform consisting of applications and services designed to provide coherent, visual, and interactive insights of data.</p> 
 <p>This book will provide thorough, technical examples of using all primary Power BI tools and features as well as demonstrate high impact end-to-end solutions that leverage and integrate these technologies and services. Get familiar with Power BI development tools and services, go deep into the data connectivity and transformation, modeling, visualization, and analytical capabilities of Power BI, and see Power BI's functional programming languages of DAX and M come alive to deliver powerful solutions to address common, challenging scenarios in business intelligence.</p> 
 <p>This book will excite and empower you to get more out of Power BI via detailed recipes, advanced design and development tips, and guidance on enhancing existing Power BI projects.</p> 
 
-## Key Features ofMicrosoft Power BI Cookbook
+## Key Features of Microsoft Power BI Cookbook
 
 <ul><li>From connecting to your data sources to developing and deploying immersive, mobile-ready dashboards and visualizations, this book covers it all</li> 
 <li>Over 90 hands-on, technical recipes, tips, and use cases from across the Power BI platform including the Power BI Service and Mobile Applications</li> 
@@ -27,10 +28,11 @@ Get more out of Microsoft Power BI turning your data into actionable insights
 <li>Understand the differences and implications of DirectQuery, Live Connections, and Import-Mode Power BI datasets and how to deploy content to the Power BI Service and schedule refreshes</li> 
 <li>Integrate other Microsoft data tools such as Excel and SQL Server Reporting Services into your Power BI solution</li> 
 </ul>
-<p><b ><u >Brett Powell's Interview</u></b></p> 
+## Brett Powell's Interview
 <ul><li><span >You can check out Brett Powell's exclusive two-part interview (<a href="https://datahub.packtpub.com/interview/microsoft-power-bi-interview-part1-brett-powell/">Part 1</a> and <a href="https://datahub.packtpub.com/interview/unlocking-the-secrets-of-microsoft-power-bi-interview-part-2-of-2-with-brett-powell-founder-of-frontline-analytics-llc/">Part 2</a>) with Packt on the DataHub website, where Brett shares his insights in the area of Power BI. </span></li> 
 </ul>
-<p><b ><u >Amazon Reviews</u></b></p> 
+
+## Amazon Reviews
 <p><img src="images/image_00_002.png" /></p> 
 <p><img src="images/image_00_003.png" /></p> 
 <p><img src="images/image_00_004.png" /></p> 
