@@ -29,7 +29,6 @@ Get more out of Microsoft Power BI turning your data into actionable insights
 </ul>
 <p><b ><u >Brett Powell's Interview</u></b></p> 
 <ul><li><span >You can check out Brett Powell's exclusive two-part interview (<a href="https://datahub.packtpub.com/interview/microsoft-power-bi-interview-part1-brett-powell/">Part 1</a> and <a href="https://datahub.packtpub.com/interview/unlocking-the-secrets-of-microsoft-power-bi-interview-part-2-of-2-with-brett-powell-founder-of-frontline-analytics-llc/">Part 2</a>) with Packt on the DataHub website, where Brett shares his insights in the area of Power BI. </span></li> 
-<li></li> 
 </ul>
 <p><b ><u >Amazon Reviews</u></b></p> 
 <p><img src="images/image_00_002.png" /></p> 
@@ -37,7 +36,7 @@ Get more out of Microsoft Power BI turning your data into actionable insights
 <p><img src="images/image_00_004.png" /></p> 
 
 ## Where can you buy this book?
-<ul><li><span >Amazon -<a href="https://www.amazon.com/Microsoft-Power-Cookbook-Intelligence-Analytical/dp/1788290143">https://www.amazon.com/Microsoft-Power-Cookbook-Intelligence-Analytical/dp/1788290143</a></span></li> 
+<ul><li><span >Amazon -<a https://www.amazon.com/Microsoft-Power-Cookbook-Intelligence-Analytical/dp/1788290143/ref=sr_1_1?ie=UTF8&qid=1519127013&sr=8-1&keywords=Microsoft+Power+BI+Cookbook">https://www.amazon.com/Microsoft-Power-Cookbook-Intelligence-Analytical/dp/1788290143</a></span></li> 
 <li><span >Packt- <a href="https://www.packtpub.com/big-data-and-business-intelligence/microsoft-power-bi-cookbook?utm_source=github&amp;utm_medium=authorengagement&amp;utm_campaign=9781788290142">https://www.packtpub.com/big-data-and-business-intelligence/microsoft-power-bi-cookbook?utm_source=github&amp;utm_medium=authorengagement&amp;utm_campaign=9781788290142</a></span></li> 
 </ul>
 
