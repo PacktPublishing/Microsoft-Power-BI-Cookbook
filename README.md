@@ -15,9 +15,9 @@ Get more out of Microsoft Power BI turning your data into actionable insights
 <li>Proven development techniques and guidance for implementing custom solutions with DAX and M languages</li> 
 </ul>
 
-<p><b ><u >Who is this book for?</u></b></p> 
+## Who is this book for?
 <p><span >This book is for BI professionals who wish to enhance their knowledge of Power BI beyond and to enhance the value of the Power BI solutions they deliver to business users. Those who are looking at quick solutions to common problems while using Power BI will also find this book to be a very useful resource.Some experience with Power BI will be useful. If you feel this book is for you, get your <a href="https://www.amazon.com/Microsoft-Power-Cookbook-Intelligence-Analytical/dp/1788290143">copy</a> today!</span></p> 
-<p><b ><u >What will you learn from this book?</u></b></p> 
+## What will you learn from this book? 
 <ul><li>Cleanse, stage, and integrate your data sources with Power BI</li> 
 <li>Abstract data complexities and provide users with intuitive, self-service BI capabilities</li> 
 <li>Build business logic and analysis into your solutions via the DAX programming language and dynamic, dashboard-ready calculations</li> 
@@ -34,12 +34,11 @@ Get more out of Microsoft Power BI turning your data into actionable insights
 <p><img src="image_00_002.png" /></p> 
 <p><img src="image_00_003.png" /></p> 
 <p><img src="image_00_004.png" /></p> 
-<p><b ><u >Where can you buy this book?</u></b></p> 
+## Where can you buy this book?
 <ul><li><span >Amazon -<a href="https://www.amazon.com/Microsoft-Power-Cookbook-Intelligence-Analytical/dp/1788290143">https://www.amazon.com/Microsoft-Power-Cookbook-Intelligence-Analytical/dp/1788290143</a></span></li> 
-<li></li> 
 <li><span >Packt- <a href="https://www.packtpub.com/big-data-and-business-intelligence/microsoft-power-bi-cookbook?utm_source=github&amp;utm_medium=authorengagement&amp;utm_campaign=9781788290142">https://www.packtpub.com/big-data-and-business-intelligence/microsoft-power-bi-cookbook?utm_source=github&amp;utm_medium=authorengagement&amp;utm_campaign=9781788290142</a></span></li> 
 </ul>
-<p><b ><u >Get to Know the Author</u></b></p> 
+## Get to Know the Author
 <p><i >Brett Powell</i></p> 
 <p><img src="image_00_005.png" /></p> 
 <p><i >Brett Powell is the owner of and business intelligence consultant at Frontline Analytics LLC, a data and analytics research and consulting firm and Microsoft Power BI partner. He has worked with Power BI technologies since they were first introduced as the SQL Server 2008R2 PowerPivot add-in for Excel 2010. He has contributed to the design and development of Microsoft and Power BI solutions of diverse scale and complexity across the retail, manufacturing, financial, and services industries. Brett regularly blogs and shares technical papers regarding the latest MSBI and Power BI features and development techniques and patterns at Insight Quest. He is also an organizer of the Boston BI User Group.</i></p> 
