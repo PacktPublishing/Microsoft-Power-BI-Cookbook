@@ -40,8 +40,8 @@
 <p><img src="images/image_00_004.png" /></p> 
 
 ## Where can you buy this book?
-<ul><li><span >Amazon -<a https://www.amazon.com/Microsoft-Power-Cookbook-Intelligence-Analytical/dp/1788290143/ref=sr_1_1?ie=UTF8&qid=1519127013&sr=8-1&keywords=Microsoft+Power+BI+Cookbook">https://www.amazon.com/Microsoft-Power-Cookbook-Intelligence-Analytical/dp/1788290143</a></span></li> 
-<li><span >Packt- <a href="https://www.packtpub.com/big-data-and-business-intelligence/microsoft-power-bi-cookbook?utm_source=github&amp;utm_medium=authorengagement&amp;utm_campaign=9781788290142">https://www.packtpub.com/big-data-and-business-intelligence/microsoft-power-bi-cookbook?utm_source=github&amp;utm_medium=authorengagement&amp;utm_campaign=9781788290142</a></span></li> 
+<ul><li>Amazon - [Microsoft Power BI Cookbook](https://www.amazon.com/Microsoft-Power-Cookbook-Intelligence-Analytical/dp/1788290143/ref=sr_1_1?ie=UTF8&qid=1519127013&sr=8-1&keywords=Microsoft+Power+BI+Cookbook)</li> 
+<li><span >Packt- [Microsoft Power BI Cookbook](https://www.packtpub.com/big-data-and-business-intelligence/microsoft-power-bi-cookbook?utm_source=github&utm_medium=authorengagement&utm_campaign=9781788290142)</li> 
 </ul>
 
 ## Get to Know the Author
