@@ -1,5 +1,6 @@
 # Microsoft Power BI Cookbook
 [Microsoft Power BI Cookbook](https://www.packtpub.com/big-data-and-business-intelligence/microsoft-power-bi-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781788290142), published by [Packt](https://www.packtpub.com/) 
+
 <img src="images/image_00_001.png" />
 
 ### Get more out of Microsoft Power BI turning your data into actionable insights
@@ -28,6 +29,7 @@
 <li>Understand the differences and implications of DirectQuery, Live Connections, and Import-Mode Power BI datasets and how to deploy content to the Power BI Service and schedule refreshes</li> 
 <li>Integrate other Microsoft data tools such as Excel and SQL Server Reporting Services into your Power BI solution</li> 
 </ul>
+
 ## Brett Powell's Interview
 <ul><li><span >You can check out Brett Powell's exclusive two-part interview (<a href="https://datahub.packtpub.com/interview/microsoft-power-bi-interview-part1-brett-powell/">Part 1</a> and <a href="https://datahub.packtpub.com/interview/unlocking-the-secrets-of-microsoft-power-bi-interview-part-2-of-2-with-brett-powell-founder-of-frontline-analytics-llc/">Part 2</a>) with Packt on the DataHub website, where Brett shares his insights in the area of Power BI. </span></li> 
 </ul>
